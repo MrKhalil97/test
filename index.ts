@@ -2,7 +2,7 @@ import { question } from 'readline-sync';
 
 type Operator = '+'| '-' | '*' | '/';   // creating specific type for operators to limit options
 
-function main(): void
+function main(): void //to not return value
 {
     const firtstr: string = question('Enter first number:\n')    //becuse question method always return a string.
     const operator: string =question('Enter operator:\n')
