@@ -1,3 +1,3 @@
-calculator.... use operators to calculate numbers...
+*Calculator*
 
-this is a new branch
+A machine which allows people to do math operations more easily. For example add, subtract, multiply, and divide.
