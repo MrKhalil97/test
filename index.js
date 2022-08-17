@@ -1,10 +1,10 @@
 "use strict";
 exports.__esModule = true;
-var readline_sync_1 = require("readline-sync");
+var readline_sync_1 = require("readline-sync"); //import question method from library "readline-sync"
 function main() {
     var firtstr = (0, readline_sync_1.question)('Enter first number:\n'); //becuse question method always return a string.
-    var operator = (0, readline_sync_1.question)('Enter operator:\n');
-    var secondstr = (0, readline_sync_1.question)('Enter second number:\n');
+    var operator = (0, readline_sync_1.question)('Enter operator:\n'); //becuse question method always return a string.
+    var secondstr = (0, readline_sync_1.question)('Enter second number:\n'); //becuse question method always return a string.
     //const op = isOperator(operator)   check if operator is valid
     //console.log(op);                  
     //const firstnum = isNumber(firtstr) check if first number is valid
@@ -13,20 +13,23 @@ function main() {
     //console.log(secondnum);
     //to check evertything is valid >>>>>>>
     var validInput = isNumber(firtstr) && isOperator(operator) && isNumber(secondstr);
-    if (validInput) {
+    if (validInput) // When Inputs are Valid
+     {
         console.log('is valid.');
         var firstnum = parseInt(firtstr);
         var secondnum = parseInt(secondstr);
         var result = calculate(firstnum, operator, secondnum);
         console.log(result);
     }
-    else {
+    else //When Inputs arn't valid
+     {
         console.log('\n invalid input\n'); //we say it's not valid and start over(re-run main())
         main();
     }
 }
 function calculate(firstNum, operator, secondnum) {
-    switch (operator) {
+    switch (operator) //using switch statment to determine what operation set active.
+     {
         case '+':
             return firstNum + secondnum;
         case '-':
